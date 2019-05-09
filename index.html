@@ -1,36 +1,11 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8" />
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-<title> Parteiencheck </title>
-
-</head>
 <body>
 
-<h1>Parteiencheck EU-Wahl 2019</h1>
+<h2>HTML Iframes</h2>
+<p>You can use the height and width attributes to specify the size of the iframe:</p>
 
-<!-- only the following has to be included where the table should be placed on the site -->
-<!-- <script type="text/javascript" src="https://zugvoegel.github.io/PartyCheckerApp/partyCheck.js"></script> -->
-  <script>
-  // jQuery
-
-  let baseUrl = "https://zugvoegel.github.io/PartyCheckerApp/"
-
-    $(window).on('load', function(){
-      $.getScript(baseUrl + "partyCheck.js"+"?"+Date.now(), function(){
-        console.log("starting setup")
-        let target = $("#target_table");
-        let json_file_path ="https://zugvoegel.github.io/data.json"+"?"+Date.now();
-        // console.log(target)
-        setUpPartyCheck(target, json_file_path, baseUrl);
-      });
-    });
-
-  </script>
-<div id="target_table"><p></p></div>
+<iframe src="./app.html" height="900" width="800" style="border:none;"></iframe>
 
 </body>
 </html>
